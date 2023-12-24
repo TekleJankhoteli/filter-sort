@@ -1,0 +1,28 @@
+#input{
+    width: 762px;
+    margin-bottom: 20px;
+    height: 40px;
+
+}
+#table{
+    width: 1400px;
+background-color:darkslateblue
+
+}
+.headerTr{
+    cursor: pointer;
+}
+
+
+
+.productTr{
+  align-self: center;
+  
+
+
+}
+td{
+   text-align: center;
+    width: 150px;
+    color:whitesmoke;
+}
