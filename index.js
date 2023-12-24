@@ -5,10 +5,15 @@ let url = "https://api.escuelajs.co/api/v1/products/";
 
 
 
+async function fetchAllProducts() {
+    const allProducts = await fetchProducts(url);
+    renderProducts(allProducts);
+}
 
 function main() {
 
-    
+   
+    fetchAllProducts()
     const fetchWithDebounce = debounce(1000, fetchAndRenderData);
     input.addEventListener("input", (e) => {
         let filterInput = e.target.value;
@@ -23,6 +28,7 @@ function fetchProducts(url) {
 }
 
 async function fetchAndRenderData(filter) {
+  
     const apiUrl = `https://api.escuelajs.co/api/v1/products?title=${filter}`;
     const products = await fetchProducts(apiUrl);
     renderProducts(products);
